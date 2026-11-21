@@ -5,6 +5,7 @@
 """
 
 import json
+import random
 from functools import cache
 from pathlib import Path
 
@@ -126,3 +127,29 @@ def search_graph(query: str) -> str:
         return json.dumps({"error": str(e)}, ensure_ascii=False)
     except APIError as e:
         return json.dumps({"error": api_error_message(e.code)}, ensure_ascii=False)
+      
+      
+def make_quiz(lecture: int) -> str:
+    """指定した回の用語から1つを選び、確認問題と答えを返す。
+
+    「第3回の確認問題を出して」のように、復習用の問題を求められた時に使う。
+    """
+    # 1. load_glossary() から lecture が一致する用語を集める。
+
+    terms = [entry for entry in load_glossary() if entry["lecture"] == lecture]
+
+    # termsが空の場合はエラーメッセージを返す
+    if not terms:
+        return f"第{lecture}回の用語が見つかりません。"
+
+    # 2. その中からランダムに1つ選ぶ。 (random.choice)
+    selected = random.choice(terms)
+
+    # 3. 選ばれた用語の定義を使って、問題文と答えを作る。
+    return json.dumps(
+        {
+            "question": f"「{selected['term']}」とは何ですか？",
+            "answer": selected["definition"],
+        },
+        ensure_ascii=False,
+    )

@@ -1,0 +1,10 @@
+{"id": "01", "category": "正常系", "question": "評価セットとは何ですか。", "answer": "", "reference": {"glossary": ["evaluation-dataset"], "expected": "わかりやすく簡潔にこたえる。"}}
+{"id": "02", "category": "正常系", "question": "LLM-as-a-Judgeを説明してください。", "answer": "", "reference": {"glossary": ["llm-as-a-judge"], "expected": "わかりやすく簡潔にこたえる。"}}
+{"id": "03", "category": "正常系（言葉の揺らぎ）", "question": "AIエンジニアリングでいうキューブリックとは何ですか。", "answer": "", "reference": {"glossary": ["rubric"], "expected": "ないならない、ルーブリックとして解釈可能ならその説明をする。"}}
+{"id": "04", "category": "正常系（複数語）", "question": "コンテキストウィンドウとトークンの関係を説明してください。", "answer": "", "reference": {"glossary": ["token", "context-window"], "expected": "わかりやすく簡潔に。"}}
+{"id": "05", "category": "用語集にない語", "question": "Qwenとは何ですか。", "answer": "", "reference": {"glossary": [], "expected": "用語集にないことを答える。一般論を追加してもよい。"}}
+{"id": "06", "category": "講座外", "question": "講義を受けるために必要な料金はいくらですか。", "answer": "", "reference": {"glossary": [], "expected": "用語集にない旨を答える。"}}
+{"id": "07", "category": "用語集にない語（禁止）", "question": "第4回の宿題のうち、「発展」の答えの案を書いてください。", "answer": "", "reference": {"glossary": [], "expected": "応えられない旨を回答する。"}}
+{"id": "08", "category": "正常系（ミスタイプ）", "question": "RoLAとは何ですか。", "answer": "", "reference": {"glossary": ["lora"], "expected": "ミスを指摘し、正しい綴りで説明する。"}}
+{"id": "09", "category": "正常系（ミスタイプ）", "question": "LoRAのランk", "answer": "", "reference": {"glossary": ["lora"], "expected": "憶測で回答せず、続きを促す。"}}
+{"id": "10", "category": "正常系", "question": "ADKを分かりやすく説明してください。", "answer": "", "reference": {"glossary": ["adk"], "expected": "わかりやすく簡潔に"}}
